@@ -1,5 +1,5 @@
 import { Application } from 'oak/application.ts';
-import router from '@/src/routes.ts';
+import router from '@/routes.ts';
 
 const app = new Application();
 

@@ -1,5 +1,5 @@
-import { Result } from '@/src/ui/view.ts';
-import { HelloValue } from '@/src/ui/hello/view.ts';
+import { Result } from '@/ui/view.ts';
+import { HelloValue } from '@/ui/hello/view.ts';
 
 export class HelloPresenter {
   index(): Result<HelloValue> {

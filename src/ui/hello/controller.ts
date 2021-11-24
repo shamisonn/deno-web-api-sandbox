@@ -1,5 +1,5 @@
 import { Context } from 'oak/context.ts';
-import { HelloPresenter } from '@/src/ui/hello/presenter.ts';
+import { HelloPresenter } from '@/ui/hello/presenter.ts';
 
 class HelloController {
   private static readonly presenter = new HelloPresenter();

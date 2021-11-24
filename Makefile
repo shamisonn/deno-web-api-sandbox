@@ -1,5 +1,5 @@
 run:
-	deno run --import-map=import_map.json --allow-net main.ts
+	deno run --import-map=import_map.json --allow-net src/main.ts
 
 build:
-	deno compile --import-map=import_map.json -o main main.ts
+	deno compile --import-map=import_map.json -o main src/main.ts

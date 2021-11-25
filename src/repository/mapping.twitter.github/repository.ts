@@ -3,7 +3,7 @@ import { GithubId } from '@/domain/github.id.ts';
 import {
   MappingByGithubIdRepositoryDto,
   MappingByTwitterIdRepositoryDto,
-} from '@/domain/repository/mapping.twitter.github/dto.ts';
+} from '@/repository/mapping.twitter.github/dto.ts';
 
 export interface MappingTwitterGithubRepository {
   getGithubIdsByTwitterId(

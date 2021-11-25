@@ -6,4 +6,8 @@ export class GithubId {
   toValue(): string {
     return this.value;
   }
+
+  isSame(id: GithubId): boolean {
+    return this.toValue() === id.toValue();
+  }
 }

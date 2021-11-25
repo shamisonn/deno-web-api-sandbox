@@ -6,4 +6,8 @@ export class TwitterId {
   toValue(): string {
     return this.value;
   }
+
+  isSame(id: TwitterId): boolean {
+    return this.toValue() === id.toValue();
+  }
 }

@@ -3,3 +3,6 @@ run:
 
 build:
 	deno compile --import-map=import_map.json -o main src/main.ts
+
+test:
+	deno test --import-map=import_map.json src/

@@ -24,16 +24,16 @@ const mock2: GithubRepositoryUserDto = {
   ],
 };
 
+const sleep = (msec: number) =>
+  new Promise((resolve) => setTimeout(resolve, msec));
+
 export class GithubRepositoryImpl implements GithubRepository {
-  getUserInfoById(id: GithubId): Promise<GithubRepositoryUserDto> {
+  async getUserInfoById(id: GithubId): Promise<GithubRepositoryUserDto> {
+    await sleep(1000);
     if (id.isSame(new GithubId('shamisonn'))) {
-      return new Promise((_resolve, _reject) => {
-        return mock1;
-      });
+      return mock1;
     }
 
-    return new Promise((_resolve, _reject) => {
-      return mock2;
-    });
+    return mock2;
   }
 }

@@ -1,4 +1,4 @@
-import { GithubRepositoryUserDto } from '@/domain/repository/github/dto.ts';
+import { GithubRepositoryUserDto } from '@/repository/github/dto.ts';
 import { GithubId } from '@/domain/github.id.ts';
 
 export interface GithubRepository {

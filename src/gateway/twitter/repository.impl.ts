@@ -2,24 +2,25 @@ import { TwitterRepository } from '@/repository/twitter/repository.ts';
 import { TwitterId } from '@/domain/twitter.id.ts';
 import { TwitterRepositoryUserDto } from '@/repository/twitter/dto.ts';
 
-export class TwitterRepositoryImpl implements TwitterRepository {
-  getUserInfoById(id: TwitterId): Promise<TwitterRepositoryUserDto> {
-    if (id.isSame(new TwitterId('shamisonn'))) {
-      return new Promise((_res, _rej) => {
-        return {
-          id: id,
-          name: 'shamisonn',
-          iconUrl: 'https://twitter.jp/shamisonn.png',
-        };
-      });
-    }
+const sleep = (msec: number) =>
+  new Promise((resolve) => setTimeout(resolve, msec));
 
-    return new Promise((_res, _rej) => {
+export class TwitterRepositoryImpl implements TwitterRepository {
+  async getUserInfoById(id: TwitterId): Promise<TwitterRepositoryUserDto> {
+    await sleep(1000);
+
+    if (id.isSame(new TwitterId('shamisonn'))) {
       return {
         id: id,
-        name: 'shohei',
-        iconUrl: 'https://twitter.jp/shohei.png',
+        name: 'しゃみそん',
+        iconUrl: 'https://twitter.jp/shamisonn.png',
       };
-    });
+    }
+
+    return {
+      id: id,
+      name: 'shohei',
+      iconUrl: 'https://twitter.jp/shohei.png',
+    };
   }
 }

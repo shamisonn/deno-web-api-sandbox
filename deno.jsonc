@@ -1,0 +1,18 @@
+{
+  "fmt": {
+    "options": {
+      "useTabs": false,
+      "singleQuote": true
+    }
+  },
+  "tasks": {
+    "run": "deno run --allow-net src/main.ts",
+    "build": "deno compile -o main src/main.ts",
+    "test": "deno test src/"
+  },
+  "imports": {
+    "@/": "./src/",
+    "testing/": "https://deno.land/std@0.116.0/testing/",
+    "oak/": "https://deno.land/x/oak@v10.0.0/"
+  }
+}

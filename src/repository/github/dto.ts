@@ -1,16 +1,16 @@
 import { GithubId } from '@/domain/github.id.ts';
 
-export interface GithubRepositoryUserDto {
+export type GithubRepositoryUserDto = {
   profile: GithubRepositoryProfileDto;
   repositries: GithubRepositoryRepositoryDto[];
-}
+};
 
-export interface GithubRepositoryProfileDto {
+export type GithubRepositoryProfileDto = {
   id: GithubId;
   name: string;
-}
+};
 
-export interface GithubRepositoryRepositoryDto {
+export type GithubRepositoryRepositoryDto = {
   url: string;
   star: number;
-}
+};

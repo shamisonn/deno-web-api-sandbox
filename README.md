@@ -3,5 +3,14 @@
 To Run
 
 ```
-$ make run
+$ deno task run
+```
+
+Call
+```
+curl localhost:8080/hello
+```
+
+```
+curl localhost:8080/twitter.name.and.github.repositories
 ```
